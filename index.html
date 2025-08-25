@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sri Lanka Holiday Packages | Holiday Landing Page Template</title>
+    <meta
+      name="description"
+      content="Book customizable Sri Lanka holiday packages. Explore Colombo, Kandy, Galle, Nuwara Eliya, Bentota & more. Enquire for best price and personalized itinerary."
+    />
+
+    <meta name="author" content="Your Brand" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --brand: #f59e0b; /* primary */
+        --brand-dark: #0284c7; /* hover */
+        --accent: #22c55e; /* success */
+        --ink: #0f172a; /* text */
+        --muted: #6b7280; /* secondary text */
+        --bg: #ffffff; /* page */
+        --soft: #f1f5f9; /* section bg */
+        --warning: #f59e0b; /* highlight */
+      }
+      html,
+      body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          "Noto Sans", sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        scroll-behavior: smooth;
+      }
+      .btn-brand {
+        background: var(--brand);
+        border-color: var(--brand);
+      }
+      .btn-brand:hover {
+        background: var(--brand-dark);
+        border-color: var(--brand-dark);
+      }
+      .text-brand {
+        color: var(--brand);
+      }
+      .bg-soft {
+        background: var(--soft);
+      }
+      .shadow-soft {
+        box-shadow: 0 10px 30px rgba(2, 8, 20, 0.06);
+      }
+      /* Navbar */
+      .navbar {
+        backdrop-filter: saturate(180%) blur(12px);
+      }
+      .navbar.sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+        background: rgba(255, 255, 255, 0.9);
+        border-bottom: 1px solid #eef2f7;
+      }
+      /* Hero */
+      .hero {
+        position: relative;
+        min-height: 84vh;
+        display: grid;
+        place-items: center;
+        background: #000;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("img/sri-lanka.jpg") center/cover no-repeat;
+        opacity: 0.65;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        /* background: radial-gradient(
+            80% 60% at 50% 20%,
+            rgba(14, 165, 233, 0.15),
+            transparent
+          ),
+          linear-gradient(to top, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.1)); */
+        background: rgba(0, 0, 0, 0.1);
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+      }
+      .hero-badge {
+        display: inline-flex;
+        gap: 0.5rem;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #e5e7eb;
+        border-radius: 999px;
+        padding: 0.4rem 0.75rem;
+        font-weight: 600;
+      }
+      /* Inquiry Card */
+      .inquiry-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 1rem;
+      }
+      .inquiry-card .form-control,
+      .inquiry-card .form-select {
+        border-radius: 0.8rem;
+      }
+      .inquiry-card .form-label {
+        font-weight: 600;
+        color: #111827;
+      }
+      /* Section spacing */
+      section {
+        padding: 64px 0;
+      }
+      @media (min-width: 992px) {
+        section {
+          padding: 88px 0;
+        }
+      }
+      .section-title {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .section-lead {
+        color: var(--muted);
+      }
+      /* Icon bullets */
+      .bullet {
+        display: flex;
+        gap: 0.75rem;
+      }
+      .bullet i {
+        font-size: 1.25rem;
+        color: var(--accent);
+      }
+      /* Package cards */
+      .package-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .package-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(2, 8, 20, 0.1);
+      }
+      .package-img {
+        aspect-ratio: 16/10;
+        object-fit: cover;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: #ecfeff;
+        border: 1px solid #bae6fd;
+        color: #0369a1;
+        padding: 0.25rem 0.5rem;
+        border-radius: 999px;
+        font-size: 0.825rem;
+        font-weight: 600;
+      }
+      .price {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      /* Timeline */
+      .timeline {
+        position: relative;
+        margin-left: 1rem;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #e5e7eb;
+      }
+      .timeline-item {
+        position: relative;
+        padding-left: 2.25rem;
+        margin-bottom: 1.25rem;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 0.25rem;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--brand);
+      }
+      /* Floating CTA */
+      .floating-cta {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        z-index: 1080;
+      }
+      .floating-cta a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 999px;
+        padding: 0.6rem 0.9rem;
+        background: #111827;
+        color: #fff;
+        text-decoration: none;
+      }
+      .floating-cta a.whatsapp {
+        background: #22c55e;
+      }
+      .sticky-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1070;
+        background: rgba(255, 255, 255, 0.98);
+        border-top: 1px solid #e5e7eb;
+      }
+      /* FAQ */
+      .accordion-button:not(.collapsed) {
+        background: #f0f9ff;
+        color: #0c4a6e;
+      }
+      /* Utilities */
+      .rating {
+        color: #f59e0b;
+      }
+      .logo {
+        height: 36px;
+        background-color: rgba(0,0,0, 0.2);
+      }
+      .trusted-logos img {
+        height: 28px;
+        opacity: 0.8;
+      }
+    </style>
+    <!-- JSON-LD (update details) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Your Brand",
+        "url": "https://your-domain.example/sri-lanka",
+        "telephone": "+91-XXXXXXXXXX",
+        "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+        "areaServed": "IN",
+        "sameAs": [
+          "https://www.facebook.com/yourbrand",
+          "https://www.instagram.com/yourbrand"
+        ],
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "39999",
+          "priceCurrency": "INR"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            class="logo "
+            src="assets\images\logo-ft.png"
+            alt="Brand Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#packages">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#highlights">Highlights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#itinerary">Itinerary</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          </ul>
+          <a href="#enquiry" class="btn btn-brand ms-lg-3">Enquire Now</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container hero-inner">
+        <div class="row g-4 align-items-center justify-content-end">
+          <div class="col-lg-5">
+            <div
+              id="enquiry"
+              class="inquiry-card bg-white p-4 p-md-4 my-5 shadow-soft"
+            >
+              <h5 class="mb-1 fw-bold text-center">Plan Your Sri Lanka Trip</h5>
+              <p class="text-secondary mb-3 text-center">
+                Start Your Journey Here
+              </p>
+
+              <form id="leadForm" class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <!-- Full Name -->
+                  <div class="col-12">
+                    <label class="form-label" for="name">Full Name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ashish Gupta"
+                      required
+                    />
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="col-12">
+                    <label class="form-label" for="phone">Phone</label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      class="form-control"
+                      placeholder="+91 98xxxxxxx"
+                      required
+                    />
+                    <div class="invalid-feedback">Phone is required.</div>
+                  </div>
+
+                  <!-- Destination -->
+                  <div class="col-12">
+                    <label class="form-label" for="destination"
+                      >Destination</label
+                    >
+                    <input
+                      id="destination"
+                      name="destination"
+                      type="text"
+                      class="form-control"
+                      placeholder="Colombo / Kandy / Galle"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter your destination.
+                    </div>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="col-12 d-grid">
+                    <button class="btn btn-brand btn-lg" type="submit">
+                      Submit
+                    </button>
+                  </div>
+
+                  <!-- Note -->
+                  <div class="col-12 small text-secondary text-center">
+                    By continuing you agree to our <a href="#">T&Cs</a> and
+                    <a href="#">Privacy Policy</a>.
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- USPs -->
+    <section class="bg-soft">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <i class="bi bi-shield-check display-6 text-brand"></i>
+              <h6 class="mt-2 mb-0">Trusted by 50k+</h6>
+              <div class="text-secondary small">happy travellers</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <i class="bi bi-cash-coin display-6 text-brand"></i>
+              <h6 class="mt-2 mb-0">Best Price</h6>
+              <div class="text-secondary small">guaranteed value</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <i class="bi bi-headset display-6 text-brand"></i>
+              <h6 class="mt-2 mb-0">24×7 Support</h6>
+              <div class="text-secondary small">on-trip assistance</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3">
+              <i class="bi bi-clipboard2-check display-6 text-brand"></i>
+              <h6 class="mt-2 mb-0">Visa Help</h6>
+              <div class="text-secondary small">end-to-end guidance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section id="highlights">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-3">Why Sri Lanka?</h2>
+            <p class="section-lead">
+              Diverse landscapes, wildlife safaris, world-class wineries, and
+              vibrant cities—Sri Lanka offers it all. Tailor your trip with
+              must‑do experiences.
+            </p>
+            <div class="d-grid gap-3">
+              <div class="bullet">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <strong>Sigiriya Rock Fortress</strong>
+                  <div class="text-secondary">
+                    Iconic UNESCO World Heritage Site with breathtaking views
+                  </div>
+                </div>
+              </div>
+              <div class="bullet">
+                <i class="bi bi-water"></i>
+                <div>
+                  <strong>Nuwara Eliya & Tea Plantations</strong>
+                  <div class="text-secondary">
+                    Scenic train rides and lush tea gardens
+                  </div>
+                </div>
+              </div>
+              <div class="bullet">
+                <i class="bi bi-sun"></i>
+                <div>
+                  <strong>Bentota & Galle Beaches</strong>
+                  <div class="text-secondary">
+                    Golden sands, water sports, and historic Galle Fort
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="#packages" class="btn btn-brand mt-4">Browse Packages</a>
+          </div>
+          <div class="col-lg-6">
+            <img
+              class="w-100 rounded-4 shadow-soft"
+              src="https://images.unsplash.com/photo-1518600506278-4e8ef466b810?q=80&w=1200&auto=format&fit=crop"
+              alt="Cape Town"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="bg-soft">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-4">
+          <div>
+            <h2 class="section-title mb-1">Popular Packages</h2>
+            <p class="section-lead">
+              Fully customizable—add nights, change hotels, swap activities.
+            </p>
+          </div>
+          <a
+            href="#enquiry"
+            class="btn btn-outline-primary d-none d-md-inline-flex"
+            >Book Your Package</a
+          >
+        </div>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img
+                class="package-img w-100"
+                src="https://images.unsplash.com/photo-1544989164-31dc3c645987?q=80&w=1200&auto=format&fit=crop"
+                alt="Cape Town"
+              />
+              <div class="p-3 p-md-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="chip"
+                    ><i class="bi bi-calendar2-week"></i> 5N/6D</span
+                  >
+                  <span class="rating"
+                    ><i class="bi bi-star-fill"></i> 4.8</span
+                  >
+                </div>
+                <h5 class="mb-1">Colombo – Kandy – Bentota</h5>
+                <div class="text-secondary small mb-2">
+                  City tour • Temple of Tooth • Beach Stay
+                </div>
+
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 4★ Stays</div>
+                  <div><i class="bi bi-car-front"></i> Transfers</div>
+                  <div><i class="bi bi-ticket-perforated"></i> Activities</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price h5 mb-0">From ₹74,999</div>
+                  <a href="#enquiry" class="btn btn-brand">Enquire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img
+                class="package-img w-100"
+                src="img/sri-lanka.jpg"
+                alt="Safari"
+              />
+              <div class="p-3 p-md-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="chip"
+                    ><i class="bi bi-calendar2-week"></i> 7N/8D</span
+                  >
+                  <span class="rating"
+                    ><i class="bi bi-star-fill"></i> 4.9</span
+                  >
+                </div>
+                <h5 class="mb-1">Kandy – Nuwara Eliya – Ella</h5>
+                <div class="text-secondary small mb-2">
+                  Big Five game drives • Winelands tour
+                </div>
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 4★/5★</div>
+                  <div><i class="bi bi-car-front"></i> Transfers</div>
+                  <div><i class="bi bi-cup-hot"></i> Breakfast</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price h5 mb-0">From ₹1,24,999</div>
+                  <a href="#enquiry" class="btn btn-brand">Enquire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img
+                class="package-img w-100"
+                src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop"
+                alt="Garden Route"
+              />
+              <div class="p-3 p-md-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="chip"
+                    ><i class="bi bi-calendar2-week"></i> 8N/9D</span
+                  >
+                  <span class="rating"
+                    ><i class="bi bi-star-fill"></i> 4.7</span
+                  >
+                </div>
+                <h5 class="mb-1"> Colombo - Sigiriya - Kandy</h5>
+                <div class="text-secondary small mb-2">
+                  Knysna • Oudtshoorn • Tsitsikamma
+                </div>
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> Boutique</div>
+                  <div><i class="bi bi-car-front"></i> Self‑drive</div>
+                  <div><i class="bi bi-map"></i> Experiences</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price h5 mb-0">From ₹1,34,999</div>
+                  <a href="#enquiry" class="btn btn-brand">Enquire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sample Itinerary -->
+    <section id="itinerary">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <h2 class="section-title mb-3">Sample 7N/8D Itinerary</h2>
+            <div class="timeline mt-4">
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 1: Arrive Colombo</h6>
+                <div class="text-secondary">
+                  Airport pickup & transfer to Negombo
+                </div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 2: Sigiriya & Dambulla</h6>
+                <div class="text-secondary">
+                  Climb Sigiriya Rock & visit Dambulla Cave Temple
+                </div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 3: Kandy</h6>
+                <div class="text-secondary">
+                  Temple of the Tooth & cultural show
+                </div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 4: Nuwara Eliya</h6>
+                <div class="text-secondary">Tea plantations & Gregory Lake</div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 5: Ella</h6>
+                <div class="text-secondary">
+                  Train ride to Ella & Little Adam’s Peak
+                </div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 6: Yala National Park</h6>
+                <div class="text-secondary">Evening safari</div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 7: Bentota / Galle</h6>
+                <div class="text-secondary">Beach relaxation & Galle Fort</div>
+              </div>
+              <div class="timeline-item">
+                <h6 class="mb-1">Day 8: Departure</h6>
+                <div class="text-secondary">
+                  Return to Colombo, fly back with memories
+                </div>
+              </div>
+            </div>
+
+            <a href="#enquiry" class="btn btn-brand mt-3"
+              >Customize This Trip</a
+            >
+          </div>
+          <div class="col-lg-7">
+            <div class="ratio ratio-16x9 rounded-4 shadow-soft overflow-hidden">
+              <iframe
+                title="Sri Lanka"
+                loading="lazy"
+                src="https://www.youtube.com/embed/I1XRwKvlFqs?si=-QzoBbvaa68uIUK0"></iframe>
+            </div>
+            <div class="row g-3 mt-3">
+              <div class="col-4">
+                <img
+                  class="w-100 rounded-3"
+                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800&auto=format&fit=crop"
+                  alt="Penguins"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="w-100 rounded-3"
+                  src="https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=800&auto=format&fit=crop"
+                  alt="Safari"
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="w-100 rounded-3"
+                  src="img/sri-lanka.jpg"
+                  alt="Winelands"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="bg-soft">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="section-title mb-1">Loved by Travellers</h2>
+          <p class="section-lead">Real reviews from recent Sri Lanka trips.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="p-4 h-100 border rounded-4 shadow-soft">
+              <div class="d-flex align-items-center mb-2">
+                <img
+                  class="rounded-circle me-2"
+                  src="https://i.pravatar.cc/48?img=12"
+                  alt="Reviewer"
+                />
+                <strong>Ritika</strong>
+                <span class="ms-2 rating"
+                  ><i class="bi bi-star-fill"></i> 5.0</span
+                >
+              </div>
+              <div class="text-secondary">
+                "Perfectly planned Colombo + Kandy + Bentota trip. Great hotels
+                and punctual transfers. Highly recommend!"
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 h-100 border rounded-4 shadow-soft">
+              <div class="d-flex align-items-center mb-2">
+                <img
+                  class="rounded-circle me-2"
+                  src="https://i.pravatar.cc/48?img=25"
+                  alt="Reviewer"
+                />
+                <strong>Rohit</strong>
+                <span class="ms-2 rating"
+                  ><i class="bi bi-star-fill"></i> 4.8</span
+                >
+              </div>
+              <div class="text-secondary">
+                Garden Route self‑drive was a dream. Support team was responsive
+                on WhatsApp throughout.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-4 h-100 border rounded-4 shadow-soft">
+              <div class="d-flex align-items-center mb-2">
+                <img
+                  class="rounded-circle me-2"
+                  src="https://i.pravatar.cc/48?img=32"
+                  alt="Reviewer"
+                />
+                <strong>Manish</strong>
+                <span class="ms-2 rating"
+                  ><i class="bi bi-star-fill"></i> 4.9</span
+                >
+              </div>
+              <div class="text-secondary">
+                Visa assistance was smooth. Customizations were handled
+                professionally. Value for money!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <!-- Footer -->
+    <!-- <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img class="logo mb-2" src="https://dummyimage.com/120x36/0ea5e9/ffffff&text=LOGO" alt="Brand Logo" />
+          <p class="text-white-50">Tailor‑made holidays crafted by destination experts. Transparent pricing, reliable support.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold">Contact</h6>
+          <ul class="list-unstyled text-white-50 small">
+            <li><i class="bi bi-telephone"></i> +91-XXXXXXXXXX</li>
+            <li><i class="bi bi-whatsapp"></i> +91-XXXXXXXXXX</li>
+            <li><i class="bi bi-envelope"></i> hello@yourbrand.com</li>
+            <li><i class="bi bi-geo-alt"></i> Your Address, City</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold">Quick Links</h6>
+          <ul class="list-unstyled text-white-50 small">
+            <li><a class="link-light text-decoration-none" href="#packages">Packages</a></li>
+            <li><a class="link-light text-decoration-none" href="#faq">FAQ</a></li>
+            <li><a class="link-light text-decoration-none" href="#enquiry">Enquire</a></li>
+            <li><a class="link-light text-decoration-none" href="#">Terms & Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-secondary mt-4 pt-3 d-flex justify-content-between align-items-center text-white-50 small">
+        <div>© <span id="yr"></span> Your Brand. All rights reserved.</div>
+        <div class="d-flex gap-3">
+          <a class="link-light" href="#"><i class="bi bi-facebook"></i></a>
+          <a class="link-light" href="#"><i class="bi bi-instagram"></i></a>
+          <a class="link-light" href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer> 
+
+    <!-- Floating CTA -->
+    <div class="floating-cta d-none d-md-flex">
+      <!-- <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20a%20South%20Africa%20trip%20quote" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
+    <a href="tel:+91XXXXXXXXXX"><i class="bi bi-telephone"></i> Call Now</a> -->
+    </div>
+    <div class="sticky-cta py-2 d-md-none">
+      <div class="container">
+        <div class="d-flex gap-2">
+          <a
+            class="btn btn-success flex-fill"
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            rel="noopener"
+            ><i class="bi bi-whatsapp"></i> WhatsApp</a
+          >
+          <a class="btn btn-brand flex-fill" href="#enquiry"
+            ><i class="bi bi-send"></i> Enquire</a
+          >
+          <a class="btn btn-dark flex-fill" href="tel:+91XXXXXXXXXX"
+            ><i class="bi bi-telephone"></i> Call</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Footer year
+      document.getElementById("yr").textContent = new Date().getFullYear();
+
+      // Simple Bootstrap validation + demo submit (replace with your backend)
+      const form = document.getElementById("leadForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          e.stopPropagation();
+          form.classList.add("was-validated");
+          return;
+        }
+        // TODO: Replace with your API endpoint or form handler
+        // Example: form.action = 'https://formspree.io/f/xxxx'; form.method = 'POST'; form.submit();
+        const data = Object.fromEntries(new FormData(form).entries());
+        alert(
+          "Thanks! Our expert will reach out.\n\n" +
+            JSON.stringify(data, null, 2)
+        );
+        form.reset();
+        form.classList.remove("was-validated");
+      });
+    </script>
+  </body>
+</html>

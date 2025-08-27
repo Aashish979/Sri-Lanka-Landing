@@ -83,20 +83,19 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: url("img/sri-lanka.jpg") center/cover no-repeat;
+        background: url("images/img/sri-lanka.jpg") center/cover no-repeat;
         opacity: 0.65;
       }
       .hero::after {
         content: "";
         position: absolute;
         inset: 0;
-        /* background: radial-gradient(
+        background: radial-gradient(
             80% 60% at 50% 20%,
             rgba(14, 165, 233, 0.15),
             transparent
           ),
-          linear-gradient(to top, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.1)); */
-        background: rgba(0, 0, 0, 0.1);
+          linear-gradient(to top, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.1));
       }
       .hero-inner {
         position: relative;
@@ -133,6 +132,12 @@
         section {
           padding: 88px 0;
         }
+      }
+
+      h1.display-1.fw-bold.sri {
+        text-align: center;
+        align-items: center;
+        margin-top: 2rem;
       }
       .section-title {
         font-weight: 800;
@@ -253,11 +258,16 @@
       }
       .logo {
         height: 36px;
-        background-color: rgba(0,0,0, 0.2);
       }
       .trusted-logos img {
         height: 28px;
         opacity: 0.8;
+      }
+
+      .hero h1,
+      .hero p {
+        color: #fff;
+        /* text-shadow: 0 2px 6px rgba(0,0,0,0.5);  */
       }
     </style>
     <!-- JSON-LD (update details) -->
@@ -287,13 +297,9 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img
-            class="logo "
-            src="img\logo-ft.png"
-            alt="Brand Logo"
-          />
+          <img class="logo" src="Images/img/brand-logo.png" alt="Brand Logo" />
         </a>
-        <button
+        <!-- <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -303,21 +309,12 @@
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="nav">
+        </button> -->
+        <div id="nav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#packages">Packages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#highlights">Highlights</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#itinerary">Itinerary</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+              <a href="#enquiry" class="btn btn-brand ms-lg-3">Enquire Now</a>
           </ul>
-          <a href="#enquiry" class="btn btn-brand ms-lg-3">Enquire Now</a>
+        
         </div>
       </div>
     </nav>
@@ -326,6 +323,10 @@
     <header class="hero">
       <div class="container hero-inner">
         <div class="row g-4 align-items-center justify-content-end">
+          <!-- Left Side Big Text -->
+          <div class="col-lg-6 text-white">
+            <h1 class="display-1 fw-bold sri">Sri Lanka</h1>
+          </div>
           <div class="col-lg-5">
             <div
               id="enquiry"
@@ -393,8 +394,15 @@
 
                   <!-- Note -->
                   <div class="col-12 small text-secondary text-center">
-                    By continuing you agree to our <a href="#">T&Cs</a> and
-                    <a href="#">Privacy Policy</a>.
+                    By continuing you agree to our
+                    <a
+                      href="https://www.beyondjourney.in/TermsAndConditions.html"
+                      >T&Cs</a
+                    >
+                    and
+                    <a href="https://www.beyondjourney.in/PrivacyPolicy.html"
+                      >Privacy Policy</a
+                    >.
                   </div>
                 </div>
               </form>
@@ -447,9 +455,9 @@
           <div class="col-lg-6">
             <h2 class="section-title mb-3">Why Sri Lanka?</h2>
             <p class="section-lead">
-              Diverse landscapes, wildlife safaris, world-class wineries, and
-              vibrant cities—Sri Lanka offers it all. Tailor your trip with
-              must‑do experiences.
+              From ancient wonders to turquoise beaches, lush mountains, and
+              vibrant culture—Sri Lanka is the perfect mix of adventure and
+              relaxation.
             </p>
             <div class="d-grid gap-3">
               <div class="bullet">
@@ -457,25 +465,90 @@
                 <div>
                   <strong>Sigiriya Rock Fortress</strong>
                   <div class="text-secondary">
-                    Iconic UNESCO World Heritage Site with breathtaking views
+                    Climb the Lion Rock for panoramic views and history at this UNESCO World Heritage site.
                   </div>
                 </div>
               </div>
               <div class="bullet">
                 <i class="bi bi-water"></i>
                 <div>
-                  <strong>Nuwara Eliya & Tea Plantations</strong>
+                  <strong>Ella & Nine Arches Bridge
+</strong>
                   <div class="text-secondary">
-                    Scenic train rides and lush tea gardens
+                   Stunning train rides, misty hills, and the iconic stone bridge surrounded by tea plantations
                   </div>
                 </div>
               </div>
               <div class="bullet">
                 <i class="bi bi-sun"></i>
                 <div>
-                  <strong>Bentota & Galle Beaches</strong>
+                  <strong>Kandy & Temple of the Tooth
+</strong>
                   <div class="text-secondary">
-                    Golden sands, water sports, and historic Galle Fort
+                   A cultural hub with sacred Buddhist relics, traditional dance, and serene lake views.
+
+
+                  </div>
+                </div>
+              </div>
+              <div class="bullet">
+                <i class="bi bi-water"></i>
+                <div>
+                  <strong>Yala National Park
+
+</strong>
+                  <div class="text-secondary">
+                  Spot leopards, elephants, and exotic birds on thrilling jungle safaris.
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="bullet">
+                <i class="bi bi-water"></i>
+                <div>
+                  <strong>Mirissa & Whale Watching
+
+</strong>
+                  <div class="text-secondary">
+                 Golden beaches with vibrant nightlife and boat tours to see majestic blue whales.
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="bullet">
+                <i class="bi bi-water"></i>
+                <div>
+                  <strong>Anuradhapura
+</strong>
+                  <div class="text-secondary">
+                  Ancient city ruins, sacred Bodhi tree, and a journey into Sri Lanka’s spiritual past.
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="bullet">
+                <i class="bi bi-water"></i>
+                <div>
+                  <strong>Galle Fort & Southern Coast
+
+</strong>
+                  <div class="text-secondary">
+                   Colonial charm, boutique cafés, and a perfect blend of history with beachside vibes.
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="bullet">
+                <i class="bi bi-water"></i>
+                <div>
+                  <strong>Nuwara Eliya Tea Country
+</strong>
+                  <div class="text-secondary">
+                  Endless tea gardens, cool climate, and the scenic train journey through misty mountains.
                   </div>
                 </div>
               </div>
@@ -486,7 +559,7 @@
           <div class="col-lg-6">
             <img
               class="w-100 rounded-4 shadow-soft"
-              src="https://images.unsplash.com/photo-1518600506278-4e8ef466b810?q=80&w=1200&auto=format&fit=crop"
+              src="images/img/ella.jpg"
               alt="Cape Town"
             />
           </div>
@@ -494,12 +567,99 @@
       </div>
     </section>
 
+    <!-- form -->
+
+    <!-- Enquiry Form Modal -->
+<div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header">
+         <h5 class="modal-title w-100 fw-bold text-center" id="enquiryModalLabel">Plan Your Sri Lanka Trip</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="leadForm" class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <!-- Full Name -->
+                  <div class="col-12">
+                    <label class="form-label fw-bold" for="name">Full Name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ashish Gupta"
+                      required
+                    />
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="col-12">
+                    <label class="form-label fw-bold" for="phone">Phone</label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      class="form-control"
+                      placeholder="+91 98xxxxxxx"
+                      required
+                    />
+                    <div class="invalid-feedback ">Phone is required.</div>
+                  </div>
+
+                  <!-- Destination -->
+                  <div class="col-12">
+                    <label class="form-label fw-bold" for="destination"
+                      >Destination</label
+                    >
+                    <input
+                      id="destination"
+                      name="destination"
+                      type="text"
+                      class="form-control"
+                      placeholder="Colombo / Kandy / Galle"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter your destination.
+                    </div>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="col-12 d-grid">
+                    <button class="btn btn-brand btn-lg" type="submit">
+                      Submit
+                    </button>
+                  </div>
+
+                  <!-- Note -->
+                  <div class="col-12 small text-secondary text-center">
+                    By continuing you agree to our
+                    <a
+                      href="https://www.beyondjourney.in/TermsAndConditions.html"
+                      >T&Cs</a
+                    >
+                    and
+                    <a href="https://www.beyondjourney.in/PrivacyPolicy.html"
+                      >Privacy Policy</a
+                    >.
+                  </div>
+                </div>
+              </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <!-- Packages -->
     <section id="packages" class="bg-soft">
       <div class="container">
         <div class="d-flex align-items-end justify-content-between mb-4">
           <div>
-            <h2 class="section-title mb-1">Popular Packages</h2>
+            <h2 class="section-title mb-1">Popular Sri Lanka Packages</h2>
             <p class="section-lead">
               Fully customizable—add nights, change hotels, swap activities.
             </p>
@@ -516,23 +676,23 @@
             <div class="package-card h-100">
               <img
                 class="package-img w-100"
-                src="https://images.unsplash.com/photo-1544989164-31dc3c645987?q=80&w=1200&auto=format&fit=crop"
-                alt="Cape Town"
+                src="Images/packages/img1.jpg"
+                alt="sri lanka"
               />
               <div class="p-3 p-md-4">
                 <div
                   class="d-flex justify-content-between align-items-center mb-2"
                 >
                   <span class="chip"
-                    ><i class="bi bi-calendar2-week"></i> 5N/6D</span
+                    ><i class="bi bi-calendar2-week"></i> 5D/4N</span
                   >
                   <span class="rating"
                     ><i class="bi bi-star-fill"></i> 4.8</span
                   >
                 </div>
-                <h5 class="mb-1">Colombo – Kandy – Bentota</h5>
+                <h5 class="mb-1">Charming Sri Lanka</h5>
                 <div class="text-secondary small mb-2">
-                  City tour • Temple of Tooth • Beach Stay
+                  Kandy • Bentota • Galle
                 </div>
 
                 <div class="d-flex gap-3 small mb-3">
@@ -542,7 +702,7 @@
                 </div>
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="price h5 mb-0">From ₹74,999</div>
-                  <a href="#enquiry" class="btn btn-brand">Enquire</a>
+                  <a href="#enquiry" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire</a>
                 </div>
               </div>
             </div>
@@ -552,23 +712,23 @@
             <div class="package-card h-100">
               <img
                 class="package-img w-100"
-                src="img/sri-lanka.jpg"
-                alt="Safari"
+                src="Images/packages/img2.jpg"
+                alt="sri-lanka"
               />
               <div class="p-3 p-md-4">
                 <div
                   class="d-flex justify-content-between align-items-center mb-2"
                 >
                   <span class="chip"
-                    ><i class="bi bi-calendar2-week"></i> 7N/8D</span
+                    ><i class="bi bi-calendar2-week"></i> 8D/7N</span
                   >
                   <span class="rating"
                     ><i class="bi bi-star-fill"></i> 4.9</span
                   >
                 </div>
-                <h5 class="mb-1">Kandy – Nuwara Eliya – Ella</h5>
+                <h5 class="mb-1">Ramayana Trails</h5>
                 <div class="text-secondary small mb-2">
-                  Big Five game drives • Winelands tour
+                  Kandy • Ramboda • Nuwara Eliya
                 </div>
                 <div class="d-flex gap-3 small mb-3">
                   <div><i class="bi bi-house-door"></i> 4★/5★</div>
@@ -577,7 +737,7 @@
                 </div>
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="price h5 mb-0">From ₹1,24,999</div>
-                  <a href="#enquiry" class="btn btn-brand">Enquire</a>
+                  <a href="#enquiry" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire</a>
                 </div>
               </div>
             </div>
@@ -587,7 +747,7 @@
             <div class="package-card h-100">
               <img
                 class="package-img w-100"
-                src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop"
+                src="Images/packages/img3.jpeg"
                 alt="Garden Route"
               />
               <div class="p-3 p-md-4">
@@ -595,15 +755,15 @@
                   class="d-flex justify-content-between align-items-center mb-2"
                 >
                   <span class="chip"
-                    ><i class="bi bi-calendar2-week"></i> 8N/9D</span
+                    ><i class="bi bi-calendar2-week"></i> 5D/4N</span
                   >
                   <span class="rating"
                     ><i class="bi bi-star-fill"></i> 4.7</span
                   >
                 </div>
-                <h5 class="mb-1"> Colombo - Sigiriya - Kandy</h5>
+                <h5 class="mb-1">5 Days Sri lanka</h5>
                 <div class="text-secondary small mb-2">
-                  Knysna • Oudtshoorn • Tsitsikamma
+                  Kandy • Nuwara Eliya
                 </div>
                 <div class="d-flex gap-3 small mb-3">
                   <div><i class="bi bi-house-door"></i> Boutique</div>
@@ -612,11 +772,182 @@
                 </div>
                 <div class="d-flex align-items-center justify-content-between">
                   <div class="price h5 mb-0">From ₹1,34,999</div>
-                  <a href="#enquiry" class="btn btn-brand">Enquire</a>
+                  <a href="#enquiry" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire</a>
                 </div>
               </div>
             </div>
           </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img
+                class="package-img w-100"
+                src="Images/packages/img4.jpeg"
+                alt="Safari"
+              />
+              <div class="p-3 p-md-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="chip"
+                    ><i class="bi bi-calendar2-week"></i> 6D/5N</span
+                  >
+                  <span class="rating"
+                    ><i class="bi bi-star-fill"></i> 4.9</span
+                  >
+                </div>
+                <h5 class="mb-1">6 Days Ramayana Tour</h5>
+                <div class="text-secondary small mb-2">
+                  Dambulla • Trincomalee • Dambulla
+                </div>
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 4★/5★</div>
+                  <div><i class="bi bi-car-front"></i> Transfers</div>
+                  <div><i class="bi bi-cup-hot"></i> Breakfast</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price h5 mb-0">From ₹1,24,999</div>
+                  <a href="#enquiry" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img
+                class="package-img w-100"
+                src="Images/packages/img5.jpg"
+                alt="Safari"
+              />
+              <div class="p-3 p-md-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="chip"
+                    ><i class="bi bi-calendar2-week"></i> 4D/3N</span
+                  >
+                  <span class="rating"
+                    ><i class="bi bi-star-fill"></i> 4.9</span
+                  >
+                </div>
+                <h5 class="mb-1">4 Days Sri Lanka</h5>
+                <div class="text-secondary small mb-2">
+                  Bentota • Mirissa • Colombo
+                </div>
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 4★/5★</div>
+                  <div><i class="bi bi-car-front"></i> Transfers</div>
+                  <div><i class="bi bi-cup-hot"></i> Breakfast</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price h5 mb-0">From ₹1,24,999</div>
+                  <a href="#enquiry" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img
+                class="package-img w-100"
+                src="Images/packages/img6.jpg"
+                alt="Safari"
+              />
+              <div class="p-3 p-md-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="chip"
+                    ><i class="bi bi-calendar2-week"></i> 7D/6N</span
+                  >
+                  <span class="rating"
+                    ><i class="bi bi-star-fill"></i> 4.9</span
+                  >
+                </div>
+                <h5 class="mb-1">7 Days Sri Lanka</h5>
+                <div class="text-secondary small mb-2">
+                  Kandy • Nuwara Eliya • Bentota  
+                </div>
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 4★/5★</div>
+                  <div><i class="bi bi-car-front"></i> Transfers</div>
+                  <div><i class="bi bi-cup-hot"></i> Breakfast</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price h5 mb-0">From ₹1,24,999</div>
+                  <a href="#enquiry" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img
+                class="package-img w-100"
+                src="Images/packages/img7.jpeg"
+                alt="sri-lanka"
+              />
+              <div class="p-3 p-md-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="chip"
+                    ><i class="bi bi-calendar2-week"></i> 6D/5N</span
+                  >
+                  <span class="rating"
+                    ><i class="bi bi-star-fill"></i> 4.9</span
+                  >
+                </div>
+                <h5 class="mb-1">Wow Sri Lanka</h5>
+                <div class="text-secondary small mb-2">
+                  Bentota • Nuwara Eliya • Colombo
+                </div>
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 4★/5★</div>
+                  <div><i class="bi bi-car-front"></i> Transfers</div>
+                  <div><i class="bi bi-cup-hot"></i> Breakfast</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price h5 mb-0">From ₹1,24,999</div>
+                  <a href="#enquiry" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="package-card h-100">
+              <img
+                class="package-img w-100"
+                src="Images/packages/img8.jpg"
+                alt="sri-lanka"
+              />
+              <div class="p-3 p-md-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="chip"
+                    ><i class="bi bi-calendar2-week"></i> 5D/4N</span
+                  >
+                  <span class="rating"
+                    ><i class="bi bi-star-fill"></i> 4.9</span
+                  >
+                </div>
+                <h5 class="mb-1">Sri Lanka Delight</h5>
+                <div class="text-secondary small mb-2">
+                  Kandy • Nuwara Eliya • Bentota
+                </div>
+                <div class="d-flex gap-3 small mb-3">
+                  <div><i class="bi bi-house-door"></i> 4★/5★</div>
+                  <div><i class="bi bi-car-front"></i> Transfers</div>
+                  <div><i class="bi bi-cup-hot"></i> Breakfast</div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="price h5 mb-0">From ₹1,24,999</div>
+                  <a href="#enquiry" class="btn btn-brand" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -626,49 +957,39 @@
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-5">
-            <h2 class="section-title mb-3">Sample 7N/8D Itinerary</h2>
+            <h2 class="section-title mb-3">Customizable Sri Lanka Itinerary</h2>
             <div class="timeline mt-4">
               <div class="timeline-item">
-                <h6 class="mb-1">Day 1: Arrive Colombo</h6>
+                <h6 class="mb-1">Day 1: India - Airport - Bentota</h6>
                 <div class="text-secondary">
-                  Airport pickup & transfer to Negombo
+                  Airport pickup & transfer to Bentota.
                 </div>
               </div>
               <div class="timeline-item">
-                <h6 class="mb-1">Day 2: Sigiriya & Dambulla</h6>
+                <h6 class="mb-1">Day 2: Bentota</h6>
                 <div class="text-secondary">
-                  Climb Sigiriya Rock & visit Dambulla Cave Temple
+                  Bentota sightseeing & Maadu River Ride.
                 </div>
               </div>
               <div class="timeline-item">
-                <h6 class="mb-1">Day 3: Kandy</h6>
+                <h6 class="mb-1">Day 3: Bentota - Nuwara Eliya</h6>
                 <div class="text-secondary">
-                  Temple of the Tooth & cultural show
+                  Elephant Orphanage & Ramboda Hanumanji Temple.
                 </div>
               </div>
               <div class="timeline-item">
                 <h6 class="mb-1">Day 4: Nuwara Eliya</h6>
-                <div class="text-secondary">Tea plantations & Gregory Lake</div>
+                <div class="text-secondary">Gregory Lake & Hakgala Garden & Victoria Park.</div>
               </div>
               <div class="timeline-item">
-                <h6 class="mb-1">Day 5: Ella</h6>
+                <h6 class="mb-1">Day 5: Nuwara Eliya - Colombo</h6>
                 <div class="text-secondary">
-                  Train ride to Ella & Little Adam’s Peak
+                  Pettah & Cinnamon Gardens & Colombo city tour
                 </div>
               </div>
               <div class="timeline-item">
-                <h6 class="mb-1">Day 6: Yala National Park</h6>
-                <div class="text-secondary">Evening safari</div>
-              </div>
-              <div class="timeline-item">
-                <h6 class="mb-1">Day 7: Bentota / Galle</h6>
-                <div class="text-secondary">Beach relaxation & Galle Fort</div>
-              </div>
-              <div class="timeline-item">
-                <h6 class="mb-1">Day 8: Departure</h6>
-                <div class="text-secondary">
-                  Return to Colombo, fly back with memories
-                </div>
+                <h6 class="mb-1">Day 6: Colombo Airport</h6>
+                <div class="text-secondary">Breakfast at hotel & transfer to airport</div>
               </div>
             </div>
 
@@ -681,27 +1002,24 @@
               <iframe
                 title="Sri Lanka"
                 loading="lazy"
-                src="https://www.youtube.com/embed/I1XRwKvlFqs?si=-QzoBbvaa68uIUK0"></iframe>
+                src="https://www.youtube.com/embed/I1XRwKvlFqs?si=-QzoBbvaa68uIUK0"
+              ></iframe>
             </div>
             <div class="row g-3 mt-3">
               <div class="col-4">
                 <img
                   class="w-100 rounded-3"
-                  src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800&auto=format&fit=crop"
+                  src="images/img/bentota.jpg"
                   alt="Penguins"
                 />
               </div>
               <div class="col-4">
-                <img
-                  class="w-100 rounded-3"
-                  src="https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=800&auto=format&fit=crop"
-                  alt="Safari"
-                />
+                <img class="w-100 rounded-3" src="images/img/kandy.jpg" alt="Safari" />
               </div>
               <div class="col-4">
                 <img
                   class="w-100 rounded-3"
-                  src="img/sri-lanka.jpg"
+                  src="images/img/sigiriya.jpg"
                   alt="Winelands"
                 />
               </div>
@@ -712,7 +1030,7 @@
     </section>
 
     <!-- Reviews -->
-    <section class="bg-soft">
+    <!-- <section class="bg-soft" id="review">
       <div class="container">
         <div class="text-center mb-4">
           <h2 class="section-title mb-1">Loved by Travellers</h2>
@@ -778,9 +1096,129 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-   
+   <!-- Reviews -->
+<section class="bg-soft" id="review">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title mb-1">Loved by Travellers</h2>
+      <p class="section-lead">Real experiences from Sri Lanka trips.</p>
+    </div>
+
+    <!-- Bootstrap Carousel -->
+    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="hover">
+
+      <div class="carousel-inner">
+
+        <!-- Review 1 -->
+        <div class="carousel-item active">
+          <div class="p-4 border rounded-4 shadow-soft text-center mx-auto" style="max-width: 700px;">
+            <img class="rounded-4 mb-3 img-fluid" src="Images/reviews/img1.webp" alt="Sri Lanka Beach">
+            <h6 class="fw-bold">Ritika</h6>
+            <div class="rating mb-2 text-warning">
+              <i class="bi bi-star-fill"></i> 5.0
+            </div>
+            <p class="text-secondary">
+              "Perfectly planned Colombo + Kandy + Bentota trip. Great hotels and punctual transfers. Highly recommend!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="carousel-item">
+          <div class="p-4 border rounded-4 shadow-soft text-center mx-auto" style="max-width: 700px;">
+            <img class="rounded-4 mb-3 img-fluid" src="Images/reviews/img2.webp" alt="Sri Lanka Kandy">
+            <h6 class="fw-bold">Rohit</h6>
+            <div class="rating mb-2 text-warning">
+              <i class="bi bi-star-fill"></i> 4.8
+            </div>
+            <p class="text-secondary">
+              "Garden Route self-drive was a dream. Support team was responsive on WhatsApp throughout."
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="carousel-item">
+          <div class="p-4 border rounded-4 shadow-soft text-center mx-auto" style="max-width: 700px;">
+            <img class="rounded-4 mb-3 img-fluid" src="Images/reviews/img3.webp" alt="Sri Lanka Sigiriya">
+            <h6 class="fw-bold">Manish</h6>
+            <div class="rating mb-2 text-warning">
+              <i class="bi bi-star-fill"></i> 4.9
+            </div>
+            <p class="text-secondary">
+              "Visa assistance was smooth. Customizations were handled professionally. Value for money!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="carousel-item">
+          <div class="p-4 border rounded-4 shadow-soft text-center mx-auto" style="max-width: 700px;">
+            <img class="rounded-4 mb-3 img-fluid" src="Images/reviews/img4.webp" alt="Sri Lanka Sigiriya">
+            <h6 class="fw-bold">Manish</h6>
+            <div class="rating mb-2 text-warning">
+              <i class="bi bi-star-fill"></i> 4.9
+            </div>
+            <p class="text-secondary">
+              "Visa assistance was smooth. Customizations were handled professionally. Value for money!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="carousel-item">
+          <div class="p-4 border rounded-4 shadow-soft text-center mx-auto" style="max-width: 700px;">
+            <img class="rounded-4 mb-3 img-fluid" src="Images/reviews/img5.webp" alt="Sri Lanka Sigiriya">
+            <h6 class="fw-bold">Manish</h6>
+            <div class="rating mb-2 text-warning">
+              <i class="bi bi-star-fill"></i> 4.9
+            </div>
+            <p class="text-secondary">
+              "Visa assistance was smooth. Customizations were handled professionally. Value for money!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="carousel-item">
+          <div class="p-4 border rounded-4 shadow-soft text-center mx-auto" style="max-width: 700px;">
+            <img class="rounded-4 mb-3 img-fluid" src="Images/reviews/img6.webp" alt="Sri Lanka Sigiriya">
+            <h6 class="fw-bold">Manish</h6>
+            <div class="rating mb-2 text-warning">
+              <i class="bi bi-star-fill"></i> 4.9
+            </div>
+            <p class="text-secondary">
+              "Visa assistance was smooth. Customizations were handled professionally. Value for money!"
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls (Styled) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+  <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle shadow" 
+        style="width:50px; height:50px;" aria-hidden="true">
+    <i class="bi bi-chevron-left fs-4"></i>
+  </span>
+  <span class="visually-hidden">Previous</span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+  <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle shadow" 
+        style="width:50px; height:50px;" aria-hidden="true">
+    <i class="bi bi-chevron-right fs-4"></i>
+  </span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+    </div>
+  </div>
+</section>
+
+
     <!-- Footer -->
     <!-- <footer class="bg-dark text-white pt-5 pb-4">
     <div class="container">

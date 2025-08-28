@@ -83,11 +83,7 @@
         content: "";
         position: absolute;
         inset: 0;
-<<<<<<< HEAD
-        background: url(".Images/img/sri-lanka.jpg") center/cover no-repeat;
-=======
         background: url("./Images/img/sri-lanka.jpg") center/cover no-repeat;
->>>>>>> 4c27abe (Fixed review carousel autoplay (2s), hover pause, and circular controls)
         opacity: 0.65;
       }
       .hero::after {
@@ -273,6 +269,8 @@
         color: #fff;
         /* text-shadow: 0 2px 6px rgba(0,0,0,0.5);  */
       }
+
+      
     </style>
     <!-- JSON-LD (update details) -->
     <script type="application/ld+json">
@@ -300,8 +298,12 @@
     <!-- Sticky Navbar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img class="logo" src="./Images/img/brand-logo.jpg" alt="Brand Logo" />
+        <a class="navbar-brand" href="#">
+          <img
+            class="logo"
+            src="./Images/img/brand-logo.jpg"
+            alt="Brand Logo"
+          />
         </a>
         <!-- <button
           class="navbar-toggler"
@@ -554,7 +556,7 @@
           <div class="col-lg-6">
             <img
               class="w-100 rounded-4 shadow-soft"
-              src="./Images/img/ella.jpg"
+              src="./images/img/ella.jpg"
               alt="Cape Town"
             />
           </div>
@@ -657,6 +659,74 @@
                   >.
                 </div>
               </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enquiry Form Modal -->
+    <div
+      class="modal fade"
+      id="enquiryModal"
+      tabindex="-1"
+      aria-labelledby="enquiryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enquiryModalLabel">Enquiry Form</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form id="enquiryForm">
+              <!-- Name -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+              <!-- Phone -->
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter your phone"
+                  required
+                />
+              </div>
+
+              <!-- Destination -->
+              <div class="mb-3">
+                <label for="destination" class="form-label">Destination</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="destination"
+                  value="Sri Lanka"
+                  readonly
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-success w-100">
+                Submit Enquiry
+              </button>
             </form>
           </div>
         </div>
@@ -1071,21 +1141,21 @@
               <div class="col-4">
                 <img
                   class="w-100 rounded-3"
-                  src="./Images/img/bentota.jpg"
+                  src="./images/img/bentota.jpg"
                   alt="Penguins"
                 />
               </div>
               <div class="col-4">
                 <img
                   class="w-100 rounded-3"
-                  src="./Images/img/kandy.jpg"
+                  src="./images/img/kandy.jpg"
                   alt="Safari"
                 />
               </div>
               <div class="col-4">
                 <img
                   class="w-100 rounded-3"
-                  src="./Images/img/sigiriya.jpg"
+                  src="./images/img/sigiriya.jpg"
                   alt="Winelands"
                 />
               </div>
@@ -1094,75 +1164,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Reviews -->
-    <!-- <section class="bg-soft" id="review">
-      <div class="container">
-        <div class="text-center mb-4">
-          <h2 class="section-title mb-1">Loved by Travellers</h2>
-          <p class="section-lead">Real reviews from recent Sri Lanka trips.</p>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="p-4 h-100 border rounded-4 shadow-soft">
-              <div class="d-flex align-items-center mb-2">
-                <img
-                  class="rounded-circle me-2"
-                  src=".https://i.pravatar.cc/48?img=12"
-                  alt="Reviewer"
-                />
-                <strong>Ritika</strong>
-                <span class="ms-2 rating"
-                  ><i class="bi bi-star-fill"></i> 5.0</span
-                >
-              </div>
-              <div class="text-secondary">
-                "Perfectly planned Colombo + Kandy + Bentota trip. Great hotels
-                and punctual transfers. Highly recommend!"
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="p-4 h-100 border rounded-4 shadow-soft">
-              <div class="d-flex align-items-center mb-2">
-                <img
-                  class="rounded-circle me-2"
-                  src=".https://i.pravatar.cc/48?img=25"
-                  alt="Reviewer"
-                />
-                <strong>Rohit</strong>
-                <span class="ms-2 rating"
-                  ><i class="bi bi-star-fill"></i> 4.8</span
-                >
-              </div>
-              <div class="text-secondary">
-                Garden Route self‑drive was a dream. Support team was responsive
-                on WhatsApp throughout.
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="p-4 h-100 border rounded-4 shadow-soft">
-              <div class="d-flex align-items-center mb-2">
-                <img
-                  class="rounded-circle me-2"
-                  src=".https://i.pravatar.cc/48?img=32"
-                  alt="Reviewer"
-                />
-                <strong>Manish</strong>
-                <span class="ms-2 rating"
-                  ><i class="bi bi-star-fill"></i> 4.9</span
-                >
-              </div>
-              <div class="text-secondary">
-                Visa assistance was smooth. Customizations were handled
-                professionally. Value for money!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Reviews -->
     <section class="bg-soft" id="review">
@@ -1350,49 +1351,8 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <!-- <footer class="bg-dark text-white pt-5 pb-4">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <img class="logo mb-2" src=".https://dummyimage.com/120x36/0ea5e9/ffffff&text=LOGO" alt="Brand Logo" />
-          <p class="text-white-50">Tailor‑made holidays crafted by destination experts. Transparent pricing, reliable support.</p>
-        </div>
-        <div class="col-md-4">
-          <h6 class="fw-bold">Contact</h6>
-          <ul class="list-unstyled text-white-50 small">
-            <li><i class="bi bi-telephone"></i> +91-XXXXXXXXXX</li>
-            <li><i class="bi bi-whatsapp"></i> +91-XXXXXXXXXX</li>
-            <li><i class="bi bi-envelope"></i> hello@yourbrand.com</li>
-            <li><i class="bi bi-geo-alt"></i> Your Address, City</li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h6 class="fw-bold">Quick Links</h6>
-          <ul class="list-unstyled text-white-50 small">
-            <li><a class="link-light text-decoration-none" href="#packages">Packages</a></li>
-            <li><a class="link-light text-decoration-none" href="#faq">FAQ</a></li>
-            <li><a class="link-light text-decoration-none" href="#enquiry">Enquire</a></li>
-            <li><a class="link-light text-decoration-none" href="#">Terms & Privacy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-top border-secondary mt-4 pt-3 d-flex justify-content-between align-items-center text-white-50 small">
-        <div>© <span id="yr"></span> Your Brand. All rights reserved.</div>
-        <div class="d-flex gap-3">
-          <a class="link-light" href="#"><i class="bi bi-facebook"></i></a>
-          <a class="link-light" href="#"><i class="bi bi-instagram"></i></a>
-          <a class="link-light" href="#"><i class="bi bi-youtube"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer> 
-
     <!-- Floating CTA -->
-    <div class="floating-cta d-none d-md-flex">
-      <!-- <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20a%20South%20Africa%20trip%20quote" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Chat on WhatsApp</a>
-    <a href="tel:+91XXXXXXXXXX"><i class="bi bi-telephone"></i> Call Now</a> -->
-    </div>
+    <div class="floating-cta d-none d-md-flex"></div>
     <div class="sticky-cta py-2 d-md-none">
       <div class="container">
         <div class="d-flex gap-2">
@@ -1413,30 +1373,45 @@
       </div>
     </div>
 
-    <script src=".https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // Footer year
-      document.getElementById("yr").textContent = new Date().getFullYear();
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-      // Simple Bootstrap validation + demo submit (replace with your backend)
-      const form = document.getElementById("leadForm");
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        if (!form.checkValidity()) {
-          e.stopPropagation();
-          form.classList.add("was-validated");
-          return; 
-        }
-        // TODO: Replace with your API endpoint or form handler
-        // Example: form.action = 'https://formspree.io/f/xxxx'; form.method = 'POST'; form.submit();
-        const data = Object.fromEntries(new FormData(form).entries());
-        alert(
-          "Thanks! Our expert will reach out.\n\n" +
-            JSON.stringify(data, null, 2)
-        );
-        form.reset();
-        form.classList.remove("was-validated");
-      });
-    </script>
+ <script>
+  // Footer year
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // Simple Bootstrap validation + demo submit (replace with your backend)
+  const form = document.getElementById("leadForm");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      e.stopPropagation();
+      form.classList.add("was-validated");
+      return;
+    }
+    const data = Object.fromEntries(new FormData(form).entries());
+    alert(
+      "Thanks! Our expert will reach out.\n\n" +
+        JSON.stringify(data, null, 2)
+    );
+    form.reset();
+    form.classList.remove("was-validated");
+  });
+
+  // ✅ Get carousel instance
+const reviewCarouselEl = document.querySelector("#reviewCarousel");
+const reviewCarousel = bootstrap.Carousel.getInstance(reviewCarouselEl);
+
+const enquiryModal = document.getElementById("enquiryModal");
+if (enquiryModal && reviewCarousel) {
+  enquiryModal.addEventListener("show.bs.modal", () => {
+    reviewCarousel.pause();
+  });
+  enquiryModal.addEventListener("hidden.bs.modal", () => {
+    reviewCarousel.cycle();
+  });
+}
+
+</script>
+
   </body>
 </html>
